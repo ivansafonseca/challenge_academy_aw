@@ -1,0 +1,16 @@
+sources:
+  - name: erp
+    description: Adventure Works sales system.
+    schema: raw_adventure_works
+    database: fea24_11
+    tables:
+      - name: product
+      - name: productsubcategory
+      - name: productcategory
+        columns:
+          - name: PRODUCTCATEGORYID
+            tests:
+              - unique
+              - not_null
+      - name: productinventory
+      - name: location

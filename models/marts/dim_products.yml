@@ -1,0 +1,34 @@
+models:
+  - name: dim_products
+    description: Products dimension based on the Adventure Works ERP system.
+    columns:
+      - name: PRODUCT_PK
+        description: To be filled.
+
+      - name: PRODUCT_NAME
+        description: To be filled.
+        
+      - name: PRODUCT_COLOR
+        description: To be filled.
+        
+      - name: PRODUCT_SAFETY_STOCK_LEVEL
+        description: To be filled.
+        
+      - name: PRODUCT_REORDER_POINT
+        description: To be filled.
+        
+      - name: PRODUCT_STANDARD_COST
+        description: To be filled.
+        
+      - name: PRODUCT_LIST_PRICE
+        description: To be filled.
+        
+      - name: PRODUCT_DAYS_TO_MANUFACTURE
+        description: To be filled.
+        
+      - name: CATEGORY_NAME
+        description: To be filled.
+        
+      - name: SUB_CATEGORY_NAME
+        description: To be filled.
+        
