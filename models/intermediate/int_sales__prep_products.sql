@@ -1,19 +1,41 @@
+/* Importing CTEs */
 with
     category as (
-        select *
+        select 
+            category_pk
+            , category_name
         from {{ ref('stg_erp__category') }}
     )
 
     , subcategory as (
-        select *
+        select 
+            sub_category_pk
+            , sub_category_name
+            , category_fk
         from {{ ref('stg_erp__subcategory') }}
     )
 
     , product as (
-        select *
+        select 
+            product_pk
+            , product_name
+            , product_number
+            , make_flag
+            , finished_goods_flag
+            , product_color
+            , product_safety_stock_level
+            , product_reorder_point
+            , product_standard_cost
+            , product_list_price
+            , product_days_to_manufacture
+            , sell_start_date
+            , class
+            , style
+            , sub_category_fk
         from {{ ref('stg_erp__product') }}
     )
-
+    
+    /* Joining tables */
     , enrich_products as (
         select
             product.product_pk

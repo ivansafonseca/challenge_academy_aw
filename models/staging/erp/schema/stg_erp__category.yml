@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_erp__category
+    description: ""
+    columns:
+      - name: category_pk
+        data_type: number
+        description: ""
+
+      - name: category_name
+        data_type: varchar
+        description: ""
+
+      - name: category_row_guid
+        data_type: varchar
+        description: ""
+
+      - name: category_modified_date
+        data_type: date
+        description: ""

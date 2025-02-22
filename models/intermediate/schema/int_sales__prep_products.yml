@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: dint_sales__prep_products
+    description: Preparation for dim_products.
+    columns:
+      - name: product_pk
+        description: ""
+
+      - name: product_name
+        data_type: varchar
+        description: ""
+
+      - name: product_number
+        data_type: varchar
+        description: ""
+
+      - name: make_flag
+        data_type: boolean
+        description: ""
+
+      - name: finished_goods_flag
+        data_type: boolean
+        description: ""
+
+      - name: product_color
+        data_type: varchar
+        description: ""
+
+      - name: product_safety_stock_level
+        data_type: number
+        description: ""
+
+      - name: product_reorder_point
+        data_type: number
+        description: ""
+
+      - name: product_standard_cost
+        data_type: float
+        description: ""
+
+      - name: product_list_price
+        data_type: float
+        description: ""
+
+      - name: product_days_to_manufacture
+        data_type: number
+        description: ""
+
+      - name: sell_start_date
+        data_type: date
+        description: ""
+
+      - name: class
+        data_type: varchar
+        description: ""
+
+      - name: style
+        data_type: varchar
+        description: ""
+
+      - name: category_name
+        data_type: varchar
+        description: ""
+
+      - name: sub_category_name
+        data_type: varchar
+        description: ""

@@ -1,9 +1,10 @@
+/* Importing CTEs */
 with
     category_source as (
         select *
         from {{ source('erp', 'productcategory') }}
     )
-
+    /* Renaming and casting */
     , renamed as (
         select
             cast(productcategoryid as int) as category_pk

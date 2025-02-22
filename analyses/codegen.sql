@@ -1,3 +1,3 @@
 {{ codegen.generate_model_yaml(
-    model_names=['dim_products']
+    model_names=['stg_erp__product']
 ) }}

@@ -1,0 +1,105 @@
+version: 2
+
+models:
+  - name: stg_erp__product
+    description: ""
+    columns:
+      - name: product_pk
+        data_type: number
+        description: ""
+
+      - name: product_name
+        data_type: varchar
+        description: ""
+
+      - name: product_number
+        data_type: varchar
+        description: ""
+
+      - name: make_flag
+        data_type: boolean
+        description: ""
+
+      - name: finished_goods_flag
+        data_type: boolean
+        description: ""
+
+      - name: product_color
+        data_type: varchar
+        description: ""
+
+      - name: product_safety_stock_level
+        data_type: number
+        description: ""
+
+      - name: product_reorder_point
+        data_type: number
+        description: ""
+
+      - name: product_standard_cost
+        data_type: float
+        description: ""
+
+      - name: product_list_price
+        data_type: float
+        description: ""
+
+      - name: product_size
+        data_type: varchar
+        description: ""
+
+      - name: product_size_unit_measure_code
+        data_type: varchar
+        description: ""
+
+      - name: product_weight_measure_code
+        data_type: varchar
+        description: ""
+
+      - name: product_weight
+        data_type: float
+        description: ""
+
+      - name: product_days_to_manufacture
+        data_type: number
+        description: ""
+
+      - name: product_product_line
+        data_type: varchar
+        description: ""
+
+      - name: class
+        data_type: varchar
+        description: ""
+
+      - name: style
+        data_type: varchar
+        description: ""
+
+      - name: sub_category_fk
+        data_type: number
+        description: ""
+
+      - name: model_fk
+        data_type: number
+        description: ""
+
+      - name: sell_start_date
+        data_type: date
+        description: ""
+
+      - name: product_sell_end_date
+        data_type: date
+        description: ""
+
+      - name: product_discontinued_date
+        data_type: varchar
+        description: ""
+
+      - name: product_row_guid
+        data_type: varchar
+        description: ""
+
+      - name: product_modified_date
+        data_type: date
+        description: ""

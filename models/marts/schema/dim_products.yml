@@ -13,36 +13,36 @@ models:
 
       - name: product_name
         data_type: varchar
-        description: ""
+        description: "Description of the product."
 
       - name: product_color
         data_type: varchar
-        description: ""
+        description: "Predominant color of the product."
 
       - name: product_safety_stock_level
         data_type: number
-        description: ""
+        description: "Stock level that is considered safe, so it avoids missing products and delays on delivery and selling."
 
       - name: product_reorder_point
         data_type: number
-        description: ""
+        description: "Product stock level that should be considered to reorder more."
 
       - name: product_standard_cost
         data_type: float
-        description: ""
+        description: "Product standard cost for the company."
 
       - name: product_list_price
         data_type: float
-        description: ""
+        description: "Product selling price."
 
       - name: product_days_to_manufacture
         data_type: number
-        description: ""
+        description: "Amount of days that takes to manufacture the product."
 
       - name: category_name
         data_type: varchar
-        description: ""
+        description: "Category that the product belongs."
 
       - name: sub_category_name
         data_type: varchar
-        description: ""
+        description: "Subcategory that the product belongs."
