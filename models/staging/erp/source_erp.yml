@@ -14,3 +14,40 @@ sources:
               - not_null
       - name: productinventory
       - name: location
+      - name: customer
+      - name: person
+        columns:
+          - name: BUSINESSENTITYID
+            tests:
+              - unique
+              - not_null
+      - name: businessentitycontact
+        columns:
+          - name: PERSONID
+            tests:
+              - unique
+              - not_null
+      - name: businessentityaddress
+        columns:
+          - name: ADDRESSID
+            tests:
+                - unique
+                - not_null
+      - name: address
+        columns:
+          - name: ADDRESSID
+            tests:
+                - unique
+                - not_null
+      - name: stateprovince
+        columns:
+          - name: stateprvinceid
+            tests:
+                - unique
+                - not_null
+      - name: countryregion
+        columns:
+          - name: countryregioncode
+            tests:
+                - unique
+                - not_null
