@@ -1,53 +1,84 @@
+
+version: 2
+
 sources:
   - name: erp
     description: Adventure Works sales system.
     schema: raw_adventure_works
     database: fea24_11
+
     tables:
       - name: product
+        description: Tables where all the Adventure Works products are listed.   
+        columns:
+          - name: productid
+            data_tests:
+              - unique
+              - not_null   
+
       - name: productsubcategory
+        description: Subcategory list that can be related to product table.
+        columns:
+          - name: productsubcategoryid
+            data_tests:
+              - unique
+              - not_null
+
       - name: productcategory
+        description: Category list that can be related to product table.
         columns:
-          - name: PRODUCTCATEGORYID
-            tests:
+          - name: productcategoryid
+            data_tests:
               - unique
               - not_null
+
       - name: productinventory
-      - name: location
+        description: The current amount of products in the Adventure Works inventory.
+
       - name: customer
+        description: Customer and related codes list.
+        columns:
+          - name: customerid
+            data_tests:
+              - unique
+              - not_null
+
       - name: person
+        description: Details of every person related to the company, employees and customers.
         columns:
-          - name: BUSINESSENTITYID
-            tests:
+          - name: businessentityid
+            data_tests:
               - unique
               - not_null
-      - name: businessentitycontact
-        columns:
-          - name: PERSONID
-            tests:
-              - unique
-              - not_null
+
       - name: businessentityaddress
+        description: Cridge connection between person's and addres' tables.
         columns:
-          - name: ADDRESSID
-            tests:
+          - name: addressid
+            data_tests:
                 - unique
                 - not_null
+
       - name: address
+        description: Address information of every person related to the company.
         columns:
-          - name: ADDRESSID
-            tests:
+          - name: addressid
+            data_tests:
                 - unique
                 - not_null
+
       - name: stateprovince
+        description: State and province details connected to the address table.
         columns:
-          - name: stateprvinceid
-            tests:
+          - name: stateprovinceid
+            data_tests:
                 - unique
                 - not_null
+
       - name: countryregion
+        description: Country and region details connected to the address table.
         columns:
           - name: countryregioncode
-            tests:
+            data_tests:
                 - unique
                 - not_null

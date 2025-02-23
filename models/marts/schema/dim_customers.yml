@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Customers dimension based on the Adventure Works ERP system."
+    columns:
+      - name: customer_pk
+        data_type: number
+        description: "Customer primary key."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: business_entity_pk
+        data_type: varchar
+        description: "Business entity primary key"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: person_full_name
+        data_type: varchar
+        description: "Customers full name."
+
+      - name: address_line_1
+        data_type: varchar
+        description: "Customers address line 1 (usually street and number)."
+
+      - name: address_line_2
+        data_type: varchar
+        description: "Customers adress line 2 (if available)."
+
+      - name: address_city
+        data_type: varchar
+        description: "Customers city."
+
+      - name: postal_code
+        data_type: varchar
+        description: "Customers postal code."
+
+      - name: state_province_name
+        data_type: varchar
+        description: "Customers state/province."
+
+      - name: country_region_name
+        data_type: varchar
+        description: "Customers country/region."

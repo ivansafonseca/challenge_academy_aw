@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: int_sales__prep_customer
+    description: ""
+    columns:
+      - name: customer_pk
+        data_type: number
+        description: ""
+
+      - name: business_entity_pk
+        data_type: varchar
+        description: ""
+
+      - name: person_full_name
+        data_type: varchar
+        description: ""
+
+      - name: address_line_1
+        data_type: varchar
+        description: ""
+
+      - name: address_line_2
+        data_type: varchar
+        description: ""
+
+      - name: address_city
+        data_type: varchar
+        description: ""
+
+      - name: postal_code
+        data_type: varchar
+        description: ""
+
+      - name: state_province_code
+        data_type: varchar
+        description: ""
+
+      - name: state_province_name
+        data_type: varchar
+        description: ""
+
+      - name: country_region_name
+        data_type: varchar
+        description: ""

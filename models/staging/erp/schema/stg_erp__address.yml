@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_erp__address
+    description: ""
+    columns:
+      - name: address_pk
+        data_type: number
+        description: ""
+
+      - name: address_line_1
+        data_type: varchar
+        description: ""
+
+      - name: address_line_2
+        data_type: varchar
+        description: ""
+
+      - name: address_city
+        data_type: varchar
+        description: ""
+
+      - name: state_province_fk
+        data_type: number
+        description: ""
+
+      - name: postal_code
+        data_type: varchar
+        description: ""
