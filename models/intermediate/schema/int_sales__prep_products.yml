@@ -1,30 +1,23 @@
 version: 2
 
 models:
-  - name: dint_sales__prep_products
+  - name: int_sales__prep_products
     description: Preparation for dim_products.
     columns:
       - name: product_pk
+        data_type: number
         description: ""
 
       - name: product_name
         data_type: varchar
         description: ""
 
-      - name: product_number
-        data_type: varchar
-        description: ""
-
-      - name: make_flag
-        data_type: boolean
-        description: ""
-
-      - name: finished_goods_flag
-        data_type: boolean
-        description: ""
-
       - name: product_color
         data_type: varchar
+        description: ""
+
+      - name: total_inventory_quantity
+        data_type: number
         description: ""
 
       - name: product_safety_stock_level
@@ -49,14 +42,6 @@ models:
 
       - name: sell_start_date
         data_type: date
-        description: ""
-
-      - name: class
-        data_type: varchar
-        description: ""
-
-      - name: style
-        data_type: varchar
         description: ""
 
       - name: category_name

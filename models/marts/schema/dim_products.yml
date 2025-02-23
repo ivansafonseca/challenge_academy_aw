@@ -19,6 +19,10 @@ models:
         data_type: varchar
         description: "Predominant color of the product."
 
+      - name: total_inventory_quantity
+        data_type: number
+        description: "Amount of products available on every stock/inventory that Adventure Workds owns."
+
       - name: product_safety_stock_level
         data_type: number
         description: "Stock level that is considered safe, so it avoids missing products and delays on delivery and selling."
