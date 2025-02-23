@@ -5,7 +5,7 @@ with
             customer_pk
             , person_fk
             , modified_date
-        from {{ ref('stg_erp__customer') }}
+        from {{ ref('stg_crm__customer') }}
         where person_fk is not null
     )
 
@@ -13,14 +13,14 @@ with
         select 
             business_entity_pk
             , person_full_name
-        from {{ ref('stg_erp__person') }}
+        from {{ ref('stg_crm__person') }}
     )
 
     , business_entity_address as (
         select 
             business_entity_pk
             , address_fk
-        from {{ ref('stg_erp__business_entity_address') }}
+        from {{ ref('stg_crm__business_entity_address') }}
     )
 
     , address as (
@@ -31,7 +31,7 @@ with
             , address_city
             , postal_code
             , state_province_fk
-        from {{ ref('stg_erp__address') }}
+        from {{ ref('stg_crm__address') }}
     )
 
     , state_province as (
@@ -40,14 +40,14 @@ with
             , state_province_code
             , state_province_name
             , country_region_fk
-        from {{ ref('stg_erp__state_province') }}
+        from {{ ref('stg_crm__state_province') }}
     )
 
     , country_region as (
         select 
             country_region_pk
             , country_region_name
-        from {{ ref('stg_erp__country_region') }}
+        from {{ ref('stg_crm__country_region') }}
     )
     
     /* Joining tables */

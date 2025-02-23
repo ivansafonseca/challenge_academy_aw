@@ -2,7 +2,7 @@
 with
     person_source as (
         select *
-        from {{ source('erp', 'person') }}
+        from {{ source('crm', 'person') }}
     )
     /* Renaming and casting */
     , renamed as (
