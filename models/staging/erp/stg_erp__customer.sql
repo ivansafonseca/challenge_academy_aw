@@ -1,18 +1,19 @@
+/* Importing CTEs */
 with
     customer_source as (
         select *
         from {{ source('erp', 'customer') }}
     )
-
+    /* Renaming and casting */
     , renamed as (
         select
-            cast(CUSTOMERID as int) as customer_pk
-            , cast(PERSONID as int) as person_fk
-            , cast(STOREID as string) as store_fk
-            , cast(TERRITORYID as string) as territory_fk
-            --, cast(ROWGUID as string)
-            --, cast(MODIFIEDDATE as string)
-            
+            cast(customerid as int) as customer_pk
+            , cast(personid as int) as person_fk
+            , cast(storeid as string) as store_fk
+            , cast(territoryid as string) as territory_fk
+            --, cast(rowguid as string)
+            , cast(modifieddate as timestamp) as modified_date
+
         from customer_source
     )
 

@@ -1,34 +1,35 @@
+/* Importing CTEs */
 with
     person_source as (
         select *
         from {{ source('erp', 'person') }}
     )
-
+    /* Renaming and casting */
     , renamed as (
         select
-            cast(BUSINESSENTITYID as string) as business_entity_pk
-            --, cast(PERSONTYPE as string) as
-            --, cast(NAMESTYLE as string) as
-            --, cast(TITLE as string) as person_title
-                ,COALESCE(TITLE, '') || 
-                CASE WHEN TITLE IS NOT NULL THEN ' ' ELSE '' END ||
-                COALESCE(FIRSTNAME, '') || 
-                CASE WHEN MIDDLENAME IS NOT NULL THEN ' ' ELSE '' END ||
-                COALESCE(MIDDLENAME, '') || 
-                CASE WHEN LASTNAME IS NOT NULL THEN ' ' ELSE '' END ||
-                COALESCE(LASTNAME, '') || 
-                CASE WHEN SUFFIX IS NOT NULL THEN ' ' ELSE '' END ||
-                COALESCE(SUFFIX, '') as person_full_name
-            --, cast(FIRSTNAME as string) as
-            --, cast(MIDDLENAME as string) as
-            --, cast(LASTNAME as string) as
-            --, cast(SUFFIX as string) as
-            --, cast(EMAILPROMOTION as string) as
-            --, cast(ADDITIONALCONTACTINFO as string) as
-            --, cast(DEMOGRAPHICS as string) as
-            --, cast(ROWGUID as string) as
-            --, cast(MODIFIEDDATE as string) as
-            
+            cast(businessentityid as string) as business_entity_pk
+            --, cast(persontype as string) as
+            --, cast(namestyle as string) as
+            --, cast(title as string) as person_title
+            , coalesce(title, '')
+            || case when title is not null then ' ' else '' end
+            || coalesce(firstname, '')
+            || case when middlename is not null then ' ' else '' end
+            || coalesce(middlename, '')
+            || case when lastname is not null then ' ' else '' end
+            || coalesce(lastname, '')
+            || case when suffix is not null then ' ' else '' end
+            || coalesce(suffix, '') as person_full_name
+            --, cast(firstname as string) as
+            --, cast(middlename as string) as
+            --, cast(lastname as string) as
+            --, cast(suffix as string) as
+            --, cast(emailpromotion as string) as
+            --, cast(additionalcontactinfo as string) as
+            --, cast(demographics as string) as
+            --, cast(rowguid as string) as
+            --, cast(modifieddate as string) as
+
         from person_source
     )
 

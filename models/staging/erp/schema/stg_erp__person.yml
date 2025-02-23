@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_erp__person
+    description: ""
+    columns:
+      - name: business_entity_pk
+        data_type: varchar
+        description: ""
+
+      - name: person_full_name
+        data_type: varchar
+        description: ""

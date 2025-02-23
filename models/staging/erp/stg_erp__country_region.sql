@@ -1,14 +1,15 @@
+/* Importing CTEs */
 with
     countryregion as (
         select *
         from {{ source('erp', 'countryregion') }}
     )
-
+    /* Renaming and casting */
     , renamed as (
         select
-            cast(COUNTRYREGIONCODE as string) as country_region_pk
-            , cast(NAME as string) as country_region_name
-            --, cast(MODIFIEDDATE as string) as
+            cast(countryregioncode as string) as country_region_pk
+            , cast(name as string) as country_region_name
+            --, cast(modifieddate as string) as
         from countryregion
     )
 

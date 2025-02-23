@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_erp__state_province
+    description: ""
+    columns:
+      - name: state_province_pk
+        data_type: varchar
+        description: ""
+
+      - name: state_province_code
+        data_type: varchar
+        description: ""
+
+      - name: country_region_fk
+        data_type: varchar
+        description: ""
+
+      - name: state_province_name
+        data_type: varchar
+        description: ""
+
+      - name: territory_pk
+        data_type: varchar
+        description: ""

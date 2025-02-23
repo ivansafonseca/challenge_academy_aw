@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_erp__business_entity_address
+    description: ""
+    columns:
+      - name: business_entity_pk
+        data_type: number
+        description: ""
+
+      - name: address_fk
+        data_type: number
+        description: ""
+
+      - name: address_type_fk
+        data_type: number
+        description: ""
