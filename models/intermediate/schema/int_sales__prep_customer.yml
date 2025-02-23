@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: int_sales__prep_customer
-    description: ""
+    description: Preparation for dim_customers.
     columns:
       - name: customer_pk
         data_type: number
