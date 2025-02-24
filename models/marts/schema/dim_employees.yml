@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: dim_employees
+    description: "Employees dimension with infortion provided by HR team on the ERP system."
+    columns:
+      - name: business_entity_pk
+        data_type: number
+        description: "Employees primary key."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: employee_full_name
+        data_type: varchar
+        description: "Employee full name with prefix and sufix."
+
+      - name: job_title
+        data_type: varchar
+        description: "Employee position on the company."
+
+      - name: department_name
+        data_type: varchar
+        description: "Employee department name."
+
+      - name: group_name
+        data_type: varchar
+        description: "Employee group name."
+
+      - name: address_line_1
+        data_type: varchar
+        description: "Employee main address line 1."
+
+      - name: address_line_2
+        data_type: varchar
+        description: "Employee main address line 2."
+
+      - name: address_city
+        data_type: varchar
+        description: "Employee's city."
+
+      - name: postal_code
+        data_type: varchar
+        description: "Employee's postal code."
+
+      - name: state_province_name
+        data_type: varchar
+        description: "Employee's state/province."
+
+      - name: country_region_name
+        data_type: varchar
+        description: "Employee's country/region."

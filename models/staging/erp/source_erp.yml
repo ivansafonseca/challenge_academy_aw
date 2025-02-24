@@ -34,3 +34,26 @@ sources:
 
       - name: productinventory
         description: The current amount of products in the Adventure Works inventory.
+
+      - name: employee
+        description: Employee information by Adventure Works HR.
+        columns:
+          - name: businessentityid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: employeedepartmenthistory
+        description: Employee department information by Adventure Works HR.
+        columns:
+          - name: businessentityid
+            data_tests:
+              - not_null
+
+      - name: department
+        description: Employee department information by Adventure Works HR.
+        columns:
+          - name: departmentid
+            data_tests:
+              - unique
+              - not_null
