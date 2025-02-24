@@ -1,13 +1,13 @@
 version: 2
 
 models:
-  - name: stg_erp__country_region
+  - name: stg_crm__person
     description: ""
     columns:
-      - name: country_region_pk
+      - name: business_entity_pk
         data_type: varchar
         description: ""
 
-      - name: country_region_name
+      - name: person_full_name
         data_type: varchar
         description: ""

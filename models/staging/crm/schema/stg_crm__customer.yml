@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_erp__customer
+  - name: stg_crm__customer
     description: ""
     columns:
       - name: customer_pk

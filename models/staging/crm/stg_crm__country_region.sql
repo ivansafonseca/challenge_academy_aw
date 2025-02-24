@@ -2,7 +2,7 @@
 with
     countryregion as (
         select *
-        from {{ source('erp', 'countryregion') }}
+        from {{ source('crm', 'countryregion') }}
     )
     /* Renaming and casting */
     , renamed as (

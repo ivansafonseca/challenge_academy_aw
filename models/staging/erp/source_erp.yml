@@ -35,50 +35,25 @@ sources:
       - name: productinventory
         description: The current amount of products in the Adventure Works inventory.
 
-      - name: customer
-        description: Customer and related codes list.
-        columns:
-          - name: customerid
-            data_tests:
-              - unique
-              - not_null
-
-      - name: person
-        description: Details of every person related to the company, employees and customers.
+      - name: employee
+        description: Employee information by Adventure Works HR.
         columns:
           - name: businessentityid
             data_tests:
               - unique
               - not_null
 
-      - name: businessentityaddress
-        description: Cridge connection between person's and addres' tables.
+      - name: employeedepartmenthistory
+        description: Employee department information by Adventure Works HR.
         columns:
-          - name: addressid
+          - name: businessentityid
             data_tests:
-                - unique
-                - not_null
+              - not_null
 
-      - name: address
-        description: Address information of every person related to the company.
+      - name: department
+        description: Employee department information by Adventure Works HR.
         columns:
-          - name: addressid
+          - name: departmentid
             data_tests:
-                - unique
-                - not_null
-
-      - name: stateprovince
-        description: State and province details connected to the address table.
-        columns:
-          - name: stateprovinceid
-            data_tests:
-                - unique
-                - not_null
-
-      - name: countryregion
-        description: Country and region details connected to the address table.
-        columns:
-          - name: countryregioncode
-            data_tests:
-                - unique
-                - not_null
+              - unique
+              - not_null

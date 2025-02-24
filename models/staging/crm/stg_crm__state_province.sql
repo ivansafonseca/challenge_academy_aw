@@ -2,7 +2,7 @@
 with
     state_province as (
         select *
-        from {{ source('erp', 'stateprovince') }}
+        from {{ source('crm', 'stateprovince') }}
     )
     /* Renaming and casting */
     , renamed as (

@@ -2,7 +2,7 @@
 with
     business_entity_address as (
         select *
-        from {{ source('erp', 'address') }}
+        from {{ source('crm', 'address') }}
     )
     /* Renaming and casting */
     , renamed as (

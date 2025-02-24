@@ -1,29 +1,25 @@
 version: 2
 
 models:
-  - name: stg_erp__address
+  - name: stg_crm__state_province
     description: ""
     columns:
-      - name: address_pk
-        data_type: number
-        description: ""
-
-      - name: address_line_1
+      - name: state_province_pk
         data_type: varchar
         description: ""
 
-      - name: address_line_2
+      - name: state_province_code
         data_type: varchar
         description: ""
 
-      - name: address_city
+      - name: country_region_fk
         data_type: varchar
         description: ""
 
-      - name: state_province_fk
-        data_type: number
+      - name: state_province_name
+        data_type: varchar
         description: ""
 
-      - name: postal_code
+      - name: territory_pk
         data_type: varchar
         description: ""
