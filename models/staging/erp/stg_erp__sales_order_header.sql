@@ -25,10 +25,10 @@ with
             --, cast(creditcardid as int) as credit_card_id
             --, cast(creditcardapprovalcode as int) as credit_card_approval_code
             , cast(currencyrateid as int) as currency_rate_fk
-            , cast(subtotal as numeric) as sub_total
-            , cast(taxamt as numeric) as tax_amt
-            , cast(freight as numeric) as freight
-            , cast(totaldue as numeric) as total_due
+            , cast(subtotal as float) as sub_total
+            , cast(taxamt as float) as tax_amt
+            , cast(freight as float) as freight
+            , cast(totaldue as float) as total_due
             --, cast(comment as string) as comment
             --, cast(rowguid as string) as row_guid
             --, cast(modifieddate as date) as modified_date
