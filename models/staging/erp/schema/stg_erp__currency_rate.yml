@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_erp__currency_rate
+    description: ""
+    columns:
+      - name: currency_rate_pk
+        data_type: number
+        description: ""
+
+      - name: currency_rate_date
+        data_type: date
+        description: ""
+
+      - name: from_currency_code
+        data_type: varchar
+        description: ""
+
+      - name: to_currency_code
+        data_type: varchar
+        description: ""
+
+      - name: average_rate
+        data_type: number
+        description: ""
+
+      - name: end_of_day_rate
+        data_type: number
+        description: ""

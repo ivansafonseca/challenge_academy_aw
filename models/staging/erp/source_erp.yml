@@ -57,3 +57,50 @@ sources:
             data_tests:
               - unique
               - not_null
+
+      - name: salesorderheader
+        description: Main information about sales orders from Adventure Works ERP.
+        columns:
+          - name: salesorderid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: salesorderdetail
+        description: Main information about sales orders from Adventure Works ERP.
+        columns:
+          - name: salesorderdetailid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: currencyrate
+        description: List of currency with its average currency rate.
+        columns:
+          - name: currencyrateid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: currency
+        description: List of currencies names.
+        columns:
+          - name: currencycode
+            data_tests:
+              - unique
+              - not_null
+
+      - name: salesorderheadersalesreason
+        description: List of sales reason's ID.
+        columns:
+          - name: salesorderid
+            data_tests:
+              - not_null
+
+      - name: salesreason
+        description: List of sales reason's names.
+        columns:
+          - name: salesreasonid
+            data_tests:
+              - unique
+              - not_null

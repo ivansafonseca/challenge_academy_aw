@@ -1,0 +1,97 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Fact table representing sales orders, capturing details of transactions, order dates, customer information, shipping, payment details, and associated sales metrics."
+
+    columns:
+      - name: sales_order_pk
+        data_type: number
+        description: "Primary key of the `fct_orders` table, uniquely identifying each sales order."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: order_date
+        data_type: date
+        description: "Date when the order was placed."
+
+      - name: due_date
+        data_type: date
+        description: "Date by which the order payment is due."
+
+      - name: ship_date
+        data_type: date
+        description: "Date when the order was shipped to the customer."
+
+      - name: order_status
+        data_type: varchar
+        description: "Current status of the order (e.g., Pending, Shipped, Completed, Canceled)."
+
+      - name: online_order_flag
+        data_type: boolean
+        description: "Indicates whether the order was placed online (`true`) or through another sales channel (`false`)."
+
+      - name: account_number
+        data_type: varchar
+        description: "Unique account number assigned to the customer for the order."
+
+      - name: customer_fk
+        data_type: number
+        description: "Foreign key referencing `dim_customers`, identifying the customer who placed the order."
+
+      - name: sales_person_fk
+        data_type: number
+        description: "Foreign key referencing `dim_employees`, identifying the salesperson responsible for the order."
+
+      - name: territory_fk
+        data_type: number
+        description: "Foreign key referencing the sales territory where the order was made."
+
+      - name: bill_to_address_fk
+        data_type: number
+        description: "Foreign key referencing the billing address of the customer."
+
+      - name: ship_to_address_fk
+        data_type: number
+        description: "Foreign key referencing the shipping address where the order was delivered."
+
+      - name: ship_method_fk
+        data_type: number
+        description: "Foreign key referencing the shipping method used for the order (e.g., Standard, Express, Pickup)."
+
+      - name: sub_total
+        data_type: number
+        description: "Total sales amount before taxes, discounts, and shipping costs."
+
+      - name: tax_amt
+        data_type: number
+        description: "Total tax amount applied to the order."
+
+      - name: freight
+        data_type: number
+        description: "Shipping cost associated with the order."
+
+      - name: total_due
+        data_type: number
+        description: "Final amount payable for the order after taxes, shipping, and discounts."
+
+      - name: from_currency_code
+        data_type: varchar
+        description: "Currency in which the order was originally placed."
+
+      - name: to_currency_code
+        data_type: varchar
+        description: "Currency to which the order amount was converted (if applicable)."
+
+      - name: average_rate
+        data_type: number
+        description: "Exchange rate applied to the order if converted between currencies."
+
+      - name: reason_name
+        data_type: varchar
+        description: "Name of the reason associated with the order (e.g., Promotion, Customer Loyalty)."
+
+      - name: reason_type
+        data_type: varchar
+        description: "Category of the sales reason (e.g., Discount, Marketing, Referral)."

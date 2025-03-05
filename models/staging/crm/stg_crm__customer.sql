@@ -13,7 +13,6 @@ with
             , cast(territoryid as string) as territory_fk
             --, cast(rowguid as string)
             , cast(modifieddate as timestamp) as modified_date
-
         from customer_source
     )
 

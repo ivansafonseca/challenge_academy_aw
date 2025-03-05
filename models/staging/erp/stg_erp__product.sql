@@ -15,8 +15,8 @@ with
             , cast(color as string) as product_color
             , cast(safetystocklevel as int) as product_safety_stock_level
             , cast(reorderpoint as int) as product_reorder_point
-            , cast(standardcost as float) as product_standard_cost
-            , cast(listprice as float) as product_list_price
+            , cast(standardcost as numeric) as product_standard_cost
+            , cast(listprice as numeric) as product_list_price
             , cast(size as string) as product_size
             , cast(sizeunitmeasurecode as string) as product_size_unit_measure_code
             , cast(weightunitmeasurecode as string) as product_weight_measure_code
