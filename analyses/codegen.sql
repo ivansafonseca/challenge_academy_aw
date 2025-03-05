@@ -1,3 +1,3 @@
 {{ codegen.generate_model_yaml(
-    model_names=['dim_employees']
+    model_names=['fct_orders']
 ) }}

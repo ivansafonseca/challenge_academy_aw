@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_erp__inventory
+    description: ""
+    columns:
+      - name: product_fk
+        data_type: number
+        description: ""
+
+      - name: inventory_quantity
+        data_type: number
+        description: ""

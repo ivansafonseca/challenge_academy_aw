@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_erp__employee
+    description: ""
+    columns:
+      - name: business_entity_pk
+        data_type: number
+        description: ""
+
+      - name: job_title
+        data_type: varchar
+        description: ""
+
+      - name: hire_date
+        data_type: date
+        description: ""
+
+      - name: current_flag
+        data_type: boolean
+        description: ""
+
+      - name: modified_date
+        data_type: timestamp_ntz
+        description: ""

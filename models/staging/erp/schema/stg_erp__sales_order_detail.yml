@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_erp__sales_order_detail
+    description: ""
+    columns:
+      - name: sales_order_fk
+        data_type: number
+        description: ""
+
+      - name: sales_order_detail_pk
+        data_type: number
+        description: ""
+
+      - name: order_qty
+        data_type: number
+        description: ""
+
+      - name: product_fk
+        data_type: number
+        description: ""
+
+      - name: spercial_offer_fk
+        data_type: number
+        description: ""
+
+      - name: unit_price
+        data_type: number
+        description: ""
+
+      - name: unit_price_discount
+        data_type: number
+        description: ""

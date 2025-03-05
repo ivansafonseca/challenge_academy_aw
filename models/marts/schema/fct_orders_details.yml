@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: fct_orders_details
+    description: "Fact table containing details of each sales order, capturing information about sold products, quantities, prices, and applied discounts."
+
+    columns:
+      - name: sales_order_detail_pk
+        data_type: number
+        description: "Primary key of the `fct_orders_details` table, uniquely identifying each individual item within a sales order."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: sales_order_fk
+        data_type: number
+        description: "Foreign key referencing `fct_orders_header`, linking the order item to the main sales order."
+
+      - name: product_fk
+        data_type: number
+        description: "Foreign key referencing `dim_products`, identifying the product sold in the order."
+
+      - name: order_qty
+        data_type: number
+        description: "Quantity of the product ordered in the sales transaction."
+
+      - name: unit_price
+        data_type: number
+        description: "Unit price of the product at the time of sale."
+
+      - name: unit_price_discount
+        data_type: number
+        description: "Percentage discount applied to the unit price of the product."
+
+      - name: gross_sales
+        data_type: number
+        description: "Total gross value of the item before discounts, calculated as `order_qty * unit_price`."
+
+      - name: total_discount
+        data_type: number
+        description: "Total discount amount applied to the item, calculated as `gross_sales * unit_price_discount`."
+
+      - name: net_sales
+        data_type: number
+        description: "Final sales value after discounts, calculated as `gross_sales - total_discount`."

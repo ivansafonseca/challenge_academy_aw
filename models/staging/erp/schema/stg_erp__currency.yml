@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_erp__currency
+    description: ""
+    columns:
+      - name: currency_code
+        data_type: varchar
+        description: ""
+
+      - name: name
+        data_type: varchar
+        description: ""

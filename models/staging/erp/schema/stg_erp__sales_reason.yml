@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_erp__sales_reason
+    description: ""
+    columns:
+      - name: sales_reason_pk
+        data_type: number
+        description: ""
+
+      - name: name
+        data_type: varchar
+        description: ""
+
+      - name: reason_type
+        data_type: varchar
+        description: ""
+
+      - name: modified_date
+        data_type: date
+        description: ""

@@ -1,0 +1,85 @@
+version: 2
+
+models:
+  - name: stg_erp__sales_order_header
+    description: ""
+    columns:
+      - name: sales_order_pk
+        data_type: number
+        description: ""
+
+      - name: revision_number
+        data_type: number
+        description: ""
+
+      - name: order_date
+        data_type: date
+        description: ""
+
+      - name: due_date
+        data_type: date
+        description: ""
+
+      - name: ship_date
+        data_type: date
+        description: ""
+
+      - name: order_status
+        data_type: varchar
+        description: ""
+
+      - name: online_order_flag
+        data_type: boolean
+        description: ""
+
+      - name: purchase_order_number
+        data_type: number
+        description: ""
+
+      - name: account_number
+        data_type: number
+        description: ""
+
+      - name: customer_fk
+        data_type: number
+        description: ""
+
+      - name: sales_person_fk
+        data_type: number
+        description: ""
+
+      - name: territory_fk
+        data_type: number
+        description: ""
+
+      - name: bill_to_address_fk
+        data_type: number
+        description: ""
+
+      - name: ship_to_address_fk
+        data_type: number
+        description: ""
+
+      - name: ship_method_fk
+        data_type: number
+        description: ""
+
+      - name: currency_rate_fk
+        data_type: number
+        description: ""
+
+      - name: sub_total
+        data_type: number
+        description: ""
+
+      - name: tax_amt
+        data_type: number
+        description: ""
+
+      - name: freight
+        data_type: number
+        description: ""
+
+      - name: total_due
+        data_type: number
+        description: ""

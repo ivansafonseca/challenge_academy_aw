@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: int_sales__prep_order_details
+    description: ""
+    columns:
+      - name: sales_order_detail_pk
+        data_type: number
+        description: ""
+
+      - name: sales_order_fk
+        data_type: number
+        description: ""
+
+      - name: product_fk
+        data_type: number
+        description: ""
+
+      - name: order_qty
+        data_type: number
+        description: ""
+
+      - name: unit_price
+        data_type: number
+        description: ""
+
+      - name: unit_price_discount
+        data_type: number
+        description: ""
+
+      - name: gross_sales
+        data_type: number
+        description: ""
+
+      - name: total_discount
+        data_type: number
+        description: ""
+
+      - name: net_sales
+        data_type: number
+        description: ""

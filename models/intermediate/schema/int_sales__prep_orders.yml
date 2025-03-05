@@ -1,0 +1,93 @@
+version: 2
+
+models:
+  - name: int_sales__prep_orders
+    description: ""
+    columns:
+      - name: sales_order_pk
+        data_type: number
+        description: ""
+
+      - name: order_date
+        data_type: date
+        description: ""
+
+      - name: due_date
+        data_type: date
+        description: ""
+
+      - name: ship_date
+        data_type: date
+        description: ""
+
+      - name: order_status
+        data_type: varchar
+        description: ""
+
+      - name: online_order_flag
+        data_type: boolean
+        description: ""
+
+      - name: account_number
+        data_type: varchar
+        description: ""
+
+      - name: customer_fk
+        data_type: number
+        description: ""
+
+      - name: sales_person_fk
+        data_type: number
+        description: ""
+
+      - name: territory_fk
+        data_type: number
+        description: ""
+
+      - name: bill_to_address_fk
+        data_type: number
+        description: ""
+
+      - name: ship_to_address_fk
+        data_type: number
+        description: ""
+
+      - name: ship_method_fk
+        data_type: number
+        description: ""
+
+      - name: sub_total
+        data_type: number
+        description: ""
+
+      - name: tax_amt
+        data_type: number
+        description: ""
+
+      - name: freight
+        data_type: number
+        description: ""
+
+      - name: total_due
+        data_type: number
+        description: ""
+
+      - name: from_currency_code
+        data_type: varchar
+        description: ""
+
+      - name: to_currency_code
+        data_type: varchar
+        description: ""
+
+      - name: average_rate
+        data_type: number
+        description: ""
+
+      - name: reason_name
+        data_type: varchar
+        description: ""
+
+      - name: reason_type
+        data_type: varchar
+        description: ""

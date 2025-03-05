@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_erp__department
+    description: ""
+    columns:
+      - name: department_pk
+        data_type: varchar
+        description: ""
+
+      - name: department_name
+        data_type: varchar
+        description: ""
+
+      - name: group_name
+        data_type: varchar
+        description: ""
