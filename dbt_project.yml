@@ -36,7 +36,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  ifonseca_academy_challenge:
 
     intermediate::
       +schema: int
@@ -47,5 +46,3 @@ models:
 
     staging:
       +schema: stg
-      erp:
-
