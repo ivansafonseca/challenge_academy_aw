@@ -37,7 +37,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
 
-    intermediate::
+  ifonseca_academy_challenge:
+    
+    intermediate:
       +schema: int
 
     marts:
