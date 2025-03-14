@@ -22,7 +22,7 @@ with
             , cast(billtoaddressid as int) as bill_to_address_fk
             , cast(shiptoaddressid as int) as ship_to_address_fk
             , cast(shipmethodid as int) as ship_method_fk
-            --, cast(creditcardid as int) as credit_card_id
+            , cast(creditcardid as int) as credit_card_fk
             --, cast(creditcardapprovalcode as int) as credit_card_approval_code
             , cast(currencyrateid as int) as currency_rate_fk
             , cast(subtotal as float) as sub_total

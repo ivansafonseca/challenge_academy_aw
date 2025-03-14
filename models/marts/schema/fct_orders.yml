@@ -88,6 +88,10 @@ models:
         data_type: number
         description: "Exchange rate applied to the order if converted between currencies."
 
+      - name: credit_type
+        data_type: varchar
+        description: "Card type that comes from the credit_card used during the purchase."
+
       - name: reason_name
         data_type: varchar
         description: "Name of the reason associated with the order (e.g., Promotion, Customer Loyalty)."
