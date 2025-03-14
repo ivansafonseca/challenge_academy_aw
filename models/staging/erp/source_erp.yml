@@ -104,3 +104,11 @@ sources:
             data_tests:
               - unique
               - not_null
+
+      - name: creditcard
+        description: List of credit card details.
+        columns:
+          - name: creditcardid
+            data_tests:
+              - unique
+              - not_null

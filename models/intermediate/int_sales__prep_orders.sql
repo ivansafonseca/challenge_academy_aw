@@ -15,6 +15,7 @@ with
             , bill_to_address_fk
             , ship_to_address_fk
             , ship_method_fk
+            , credit_card_fk
             , sub_total
             , tax_amt
             , freight
@@ -47,6 +48,13 @@ with
         from {{ ref('stg_erp__sales_reason') }}
     )
 
+    , credit_card as (
+        select
+            credit_card_pk
+            , card_type
+        from {{ ref('stg_erp__credit_card') }}
+    )
+
     /* Joining tables */
     , enrich_orders as (
         select
@@ -70,12 +78,14 @@ with
             , currency_rate.from_currency_code
             , currency_rate.to_currency_code
             , currency_rate.average_rate
+            , credit_card.card_type
             , sales_reason.reason_name
             , sales_reason.reason_type
         from sales_order_header
         left join currency_rate on sales_order_header.currency_rate_fk = currency_rate.currency_rate_pk
         left join sales_order_header_sales_reason on sales_order_header.sales_order_pk = sales_order_header_sales_reason.sales_order_fk
         left join sales_reason on sales_order_header_sales_reason.sales_reason_fk = sales_reason.sales_reason_pk
+        left join credit_card on sales_order_header.credit_card_fk = credit_card.credit_card_pk
     )
 
 select *
