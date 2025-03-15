@@ -21,6 +21,7 @@ with
             , freight
             , total_due
             , currency_rate_fk
+            , modified_date
         from {{ ref('stg_erp__sales_order_header') }}
     )
 
@@ -81,6 +82,7 @@ with
             , credit_card.card_type
             , sales_reason.reason_name
             , sales_reason.reason_type
+            , sales_order_header.modified_date
         from sales_order_header
         left join currency_rate on sales_order_header.currency_rate_fk = currency_rate.currency_rate_pk
         left join sales_order_header_sales_reason on sales_order_header.sales_order_pk = sales_order_header_sales_reason.sales_order_fk
