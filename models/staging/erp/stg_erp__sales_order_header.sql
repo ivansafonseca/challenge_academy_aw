@@ -31,7 +31,7 @@ with
             , cast(totaldue as float) as total_due
             --, cast(comment as string) as comment
             --, cast(rowguid as string) as row_guid
-            --, cast(modifieddate as date) as modified_date
+            , cast(modifieddate as date) as modified_date
         from sales_order_header
     )
 

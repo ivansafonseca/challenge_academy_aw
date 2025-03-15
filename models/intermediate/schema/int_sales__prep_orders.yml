@@ -95,3 +95,7 @@ models:
       - name: reason_type
         data_type: varchar
         description: ""
+
+      - name: modified_date
+        data_type: date
+        description: ""

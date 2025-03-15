@@ -83,3 +83,7 @@ models:
       - name: total_due
         data_type: number
         description: ""
+
+      - name: modified_date
+        data_type: date
+        description: ""       
