@@ -73,7 +73,7 @@ Developers can work in one of two environments:
 ### dbt Packages
 
 - **dbt-utils:** Offers a suite of helpful macros for routine tasks.
-- **codegen:** Automates the generation of dbt models and scaffolding code. For more details, refer to the [dbt codegen documentation](https://adventureworks.com/dbt-codegen).
+- **codegen:** Automates the generation of dbt models and scaffolding code.
 
 ### Recommended VSCode Extensions
 
