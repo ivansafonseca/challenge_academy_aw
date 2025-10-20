@@ -20,4 +20,4 @@ with
     )
 
 select *
-from renamed
+from renamed  
