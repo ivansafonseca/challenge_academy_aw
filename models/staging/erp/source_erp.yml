@@ -1,6 +1,6 @@
 
 version: 2
-
+ 
 sources:
   - name: erp
     description: Adventure Works sales system.
