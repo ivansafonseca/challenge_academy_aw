@@ -5,7 +5,7 @@ with
             business_entity_pk
             , job_title
             , modified_date
-        from {{ ref('stg_erp__employee') }}
+        from {{ ref('stg_erp__employee') }} 
     )
 
     , person as (
