@@ -66,7 +66,7 @@ with
         select
             country_region_pk
             , country_region_name
-        from {{ ref('stg_crm__country_region') }}
+        from {{ ref('stg_crm__country_region') }} 
     )
 
     /* Joining tables */
