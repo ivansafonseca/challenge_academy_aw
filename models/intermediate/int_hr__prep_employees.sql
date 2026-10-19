@@ -3,7 +3,7 @@ with
     employee as (
         select
             business_entity_pk
-            , job_title
+            , job_title 
             , modified_date
         from {{ ref('stg_erp__employee') }} 
     )
